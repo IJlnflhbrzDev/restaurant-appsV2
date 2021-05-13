@@ -1,4 +1,5 @@
 import "regenerator-runtime"; /* for async await transpile */
+import { DataDumy } from "./data/dumy.-dicoding";
 import "../styles/main.css";
 
 const btn_nav_mobile = document.getElementById("nav-drawwer");
@@ -12,3 +13,5 @@ btn_nav_mobile.addEventListener("click", function () {
 handle_drawwer.addEventListener("click", function () {
   nav_DrawwerMobile.classList.remove("show-menu-mobile");
 });
+
+DataDumy();

@@ -16,3 +16,5 @@ function CardHtml(resto) {
 
      `;
 }
+
+export { CardHtml };
