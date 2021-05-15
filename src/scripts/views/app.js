@@ -3,6 +3,8 @@
 /* eslint-disable no-underscore-dangle */
 
 import DrawerInitiator from '../utils/drawer-initiator.js';
+import UrlParser from '../routes/url-parser';
+import routes from '../routes/routes';
 
 /* eslint-disable no-sequences */
 class App {
@@ -20,6 +22,15 @@ class App {
       drawer: this._drawer,
       content: this._content,
     });
+  }
+
+  // HALAMAN UNTUK MERENDER BERDASARKAN URL YG DI MINTA
+  async renderPage() {
+    const url = UrlParser.parseActiveUrlWithCombiner();
+    const page = routes[url];
+
+    this._content.innerHTML = await page.render();
+    await page.afterRender();
   }
 }
 

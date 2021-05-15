@@ -13,4 +13,4 @@ const daftarResto = {
   },
 };
 
-export default NowPlaying;
+export default daftarResto;

@@ -9,3 +9,11 @@ const app = new App({
   content: document.querySelector('.conten'),
 });
 console.log(app);
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+});

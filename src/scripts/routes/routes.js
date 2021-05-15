@@ -6,6 +6,7 @@ import favoriteResto from '../views/pages/favorite-resto';
 
 const routes = {
   '/': daftarResto,
+  '/daftar-restoran': daftarResto,
   '/favorite': favoriteResto,
   '/detail:id': detailResto,
 };
