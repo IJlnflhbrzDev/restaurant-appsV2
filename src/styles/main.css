@@ -146,7 +146,7 @@ body {
 }
 
 .nav-brand {
-  font-family: "Satisfy", cursive;
+  font-family: 'Satisfy', cursive;
   letter-spacing: 2px;
   color: #fff;
   font-size: 30px;
@@ -289,6 +289,7 @@ main section article .card-img {
   width: 100%;
   background-position: center;
   background-size: cover;
+  height: 500px;
 }
 
 main section article .card-img:focus {
@@ -337,9 +338,10 @@ main section article .card-body h5 a {
 
 main section article .card-body p {
   overflow: hidden;
-  text-overflow: ellipsis;
   max-width: 100%;
-  max-height: 112px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 /*

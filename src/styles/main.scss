@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 // Color Themse
-@import "./color-themes", "./_aksesibilitas", "./responsive-page";
+@import './color-themes', './_aksesibilitas', './responsive-page';
 
 * {
   padding: 0;
@@ -33,7 +33,7 @@ body {
     padding: 20px 15px;
   }
   &-brand {
-    font-family: "Satisfy", cursive;
+    font-family: 'Satisfy', cursive;
     letter-spacing: 2px;
     color: $white;
     font-size: 30px;
@@ -134,6 +134,7 @@ main {
           width: 100%;
           background-position: center;
           background-size: cover;
+          height: 500px;
           &:focus {
             border: 7px dotted gold !important;
           }
@@ -178,9 +179,10 @@ main {
 
           p {
             overflow: hidden;
-            text-overflow: ellipsis;
             max-width: 100%;
-            max-height: 112px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
           }
         }
       }
