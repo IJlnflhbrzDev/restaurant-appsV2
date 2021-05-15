@@ -1,8 +1,10 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-unused-vars */
 function CardHtml(resto) {
   return `
      <article>
                     <div class="card">
-                         <img src="${resto.pictureId}"  class="card-img" alt=${resto.name}>
+                         <img src="https://restaurant-api.dicoding.dev/images/small/${resto.pictureId}"  class="card-img" alt=${resto.name}>
                          <div class="card-lokasi">
                               <h3>Kota,${resto.city}</h3>
                          </div>
