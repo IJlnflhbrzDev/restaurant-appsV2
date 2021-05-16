@@ -1,3 +1,9 @@
+/* eslint-disable import/named */
+/* eslint-disable comma-dangle */
+import UrlParser from '../../routes/url-parser';
+import DumyDicodingSource from '../../data/dumy.-dicoding';
+import { RestoDetailTemplate } from '../templates/template-html';
+
 /* eslint-disable no-unused-vars */
 const detailResto = {
   async render() {
@@ -7,7 +13,13 @@ const detailResto = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const restorantDetail = await DumyDicodingSource.GetDetailRestaurant(
+      url.id
+    );
+    const restoranContainer = document.querySelector('.conten');
+
+    restoranContainer.innerHTML += RestoDetailTemplate(restorantDetail);
   },
 };
 

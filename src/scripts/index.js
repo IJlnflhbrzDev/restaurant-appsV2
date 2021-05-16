@@ -1,5 +1,4 @@
 import 'regenerator-runtime'; /* for async await transpile */
-// import './data/dumy.-dicoding';
 import '../styles/main.css';
 import App from './views/app';
 

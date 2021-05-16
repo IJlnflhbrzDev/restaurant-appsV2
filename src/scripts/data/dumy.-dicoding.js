@@ -1,11 +1,18 @@
 /* eslint-disable import/prefer-default-export */
-import { CardHtml } from '../views/templates/template-html';
+import API_ENPOINT from '../globals/api-endpoint';
 
-fetch('https://restaurant-api.dicoding.dev/list')
-  .then((response) => response.json())
-  .then((result) => {
-    result.restaurants.forEach((items) => {
-      const contentMain = document.querySelector('.conten');
-      contentMain.innerHTML += CardHtml(items);
-    });
-  });
+class DumyDicodingSource {
+  static async GetRestauranList() {
+    const response = await fetch(API_ENPOINT.RESTAURANT_LIST);
+    const responseJson = await response.json();
+    return responseJson.restaurants;
+  }
+
+  static async GetDetailRestaurant(id) {
+    const response = await fetch(API_ENPOINT.RESTAURANT_DETAIL(id));
+    const responseJson = await response.json();
+    return responseJson.restaurants;
+  }
+}
+
+export default DumyDicodingSource;
