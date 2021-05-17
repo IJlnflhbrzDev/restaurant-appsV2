@@ -246,15 +246,23 @@ main {
 
 main h2 {
   color: #fff;
-  margin-bottom: 30px;
+  position: absolute;
+  top: -59px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+  background-color: black;
 }
 
 main section {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+  margin-top: 50px;
 }
 
 main section article {
@@ -277,7 +285,6 @@ main section article .card {
   position: relative;
   border-radius: 0.25rem;
   max-width: 500px;
-  max-height: 400px;
   overflow: hidden;
 }
 
@@ -289,7 +296,7 @@ main section article .card-img {
   width: 100%;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  min-height: 230px;
 }
 
 main section article .card-img:focus {
@@ -342,6 +349,23 @@ main section article .card-body p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+main section article .card-body .btn_detail {
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+  background-color: gold;
+  line-height: 44px;
+  text-decoration: none;
+  padding: 0 2em;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+main section article .card-body .btn_detail:hover {
+  background-color: blue;
+  color: white;
 }
 
 /*
