@@ -8,7 +8,7 @@ import { restoTemplate } from '../../views/templates/template-html';
 const daftarResto = {
   async render() {
     return `
-      <h2>Daftar Restoran Metode Get request API</h2>
+     <h2>DAFTAR <span>RESTAURANTS</span></h2>
     `;
   },
 

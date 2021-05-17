@@ -11,7 +11,7 @@ class DumyDicodingSource {
   static async GetDetailRestaurant(id) {
     const response = await fetch(API_ENPOINT.RESTAURANT_DETAIL(id));
     const responseJson = await response.json();
-    return responseJson.restaurants;
+    return responseJson.restaurant;
   }
 }
 

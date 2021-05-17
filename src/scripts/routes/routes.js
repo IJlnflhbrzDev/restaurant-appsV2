@@ -8,7 +8,7 @@ const routes = {
   '/': daftarResto,
   '/daftar-restoran': daftarResto,
   '/favorite': favoriteResto,
-  '/detail:id': detailResto,
+  '/detail/:id': detailResto,
 };
 
 export default routes;
