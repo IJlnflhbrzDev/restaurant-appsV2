@@ -115,7 +115,7 @@ main {
     z-index: 1;
     background-color: black;
   }
-  section.content {
+  section.conten {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -221,6 +221,7 @@ main {
 */
 
 section.detail-conten {
+  position: relative;
   width: 100%;
   height: max-content;
   display: flex;
@@ -233,13 +234,13 @@ section.detail-conten {
     border-radius: 20px;
     img {
       width: 100%;
-      object-fit: cover;
-      object-position: top;
-      max-height: 300px;
+      object-fit: fill;
+      max-height: 450px;
       border-radius: 20px;
+      margin-bottom: 10px;
     }
 
-    h3 {
+    .nama-resto {
       font-size: 20px;
       color: goldenrod;
     }
@@ -255,6 +256,7 @@ section.detail-conten {
       font-size: 15px;
       font-style: italic;
       font-weight: bold;
+      margin-bottom: 5px;
     }
     p {
       font-size: 13px;

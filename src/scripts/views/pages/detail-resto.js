@@ -10,7 +10,7 @@ import { RestoDetailTemplate } from '../templates/template-html';
 const detailResto = {
   async render() {
     return `
-      <h2>Detail Resto Page</h2>
+
     `;
   },
 

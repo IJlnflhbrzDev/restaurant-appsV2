@@ -41,7 +41,7 @@ const RestoDetailTemplate = (resto) => {
            alt="Gambar ${resto.name}">
 
            <div class="detail-body">
-               <h3>${resto.name}</h3>
+               <h3 class="nama-resto">${resto.name}</h3>
                <h4>Rating <span>${resto.rating}</span></h4>
                <h5>Kota ${resto.city}</h5>
 
@@ -80,7 +80,7 @@ const RestoDetailTemplate = (resto) => {
                <h6>Customer Reviews</h6>
                     ${resto.customerReviews.map((customer) => {
                       return `
-                              <p>${customer.name}</p>
+                              <h6>${customer.name}</h6>
                               <small>${customer.review}</small>
                               <p>${customer.date}</p>
                          `;
