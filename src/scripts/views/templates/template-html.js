@@ -42,7 +42,7 @@ const RestoDetailTemplate = (resto) => {
 
            <div class="detail-body">
                <h3>${resto.name}</h3>
-               <h4>${resto.rating}</h4>
+               <h4>Rating <span>${resto.rating}</span></h4>
                <h5>Kota ${resto.city}</h5>
 
                <div class="adress">
@@ -67,8 +67,8 @@ const RestoDetailTemplate = (resto) => {
                <div class="menu-drinks">
                          <h6>Menu Minuman</h6>
                          <p>${resto.menus.drinks
-                           .map((item) => `<span>${item.name}</span>`)
-                           .join(' , ')}</p>
+                           .map((item) => `<small>${item.name}</small>`)
+                           .join(', ')}</p>
                </div>
 
                <div class="description">
@@ -80,7 +80,7 @@ const RestoDetailTemplate = (resto) => {
                <h6>Customer Reviews</h6>
                     ${resto.customerReviews.map((customer) => {
                       return `
-                              <h6>${customer.name}</h6>
+                              <p>${customer.name}</p>
                               <small>${customer.review}</small>
                               <p>${customer.date}</p>
                          `;

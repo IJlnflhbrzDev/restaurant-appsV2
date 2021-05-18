@@ -255,7 +255,7 @@ main h2 {
   background-color: black;
 }
 
-main section {
+main section.content {
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -265,13 +265,13 @@ main section {
   margin-top: 50px;
 }
 
-main section article {
+main section.content article {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
 
-main section article .card {
+main section.content article .card {
   background-color: #19182c;
   border: 1px solid white;
   color: #797983;
@@ -288,22 +288,22 @@ main section article .card {
   overflow: hidden;
 }
 
-main section article .card:focus {
+main section.content article .card:focus {
   border: 7px dotted gold !important;
 }
 
-main section article .card-img {
+main section.content article .card-img {
   width: 100%;
   background-position: center;
   background-size: cover;
   min-height: 230px;
 }
 
-main section article .card-img:focus {
+main section.content article .card-img:focus {
   border: 7px dotted gold !important;
 }
 
-main section article .card-lokasi {
+main section.content article .card-lokasi {
   position: absolute;
   padding: 8px 10px;
   background-color: #19182c;
@@ -317,15 +317,15 @@ main section article .card-lokasi {
   border-top-right-radius: 0.25rem;
 }
 
-main section article .card-lokasi h3 {
+main section.content article .card-lokasi h3 {
   font-size: 14px;
 }
 
-main section article .card-body {
+main section.content article .card-body {
   padding: 0.7rem;
 }
 
-main section article .card-body h4 {
+main section.content article .card-body h4 {
   margin-bottom: 6px;
   font-size: 15px;
   color: #ffab2c;
@@ -334,7 +334,7 @@ main section article .card-body h4 {
   font-style: italic;
 }
 
-main section article .card-body h5 a {
+main section.content article .card-body h5 a {
   display: inline-block;
   line-height: 44px;
   font-size: 17px;
@@ -343,7 +343,7 @@ main section article .card-body h5 a {
   text-decoration: none;
 }
 
-main section article .card-body p {
+main section.content article .card-body p {
   overflow: hidden;
   max-width: 100%;
   display: -webkit-box;
@@ -351,7 +351,7 @@ main section article .card-body p {
   -webkit-box-orient: vertical;
 }
 
-main section article .card-body .btn_detail {
+main section.content article .card-body .btn_detail {
   display: inline-block;
   min-width: 44px;
   min-height: 44px;
@@ -363,7 +363,7 @@ main section article .card-body .btn_detail {
   margin-top: 10px;
 }
 
-main section article .card-body .btn_detail:hover {
+main section.content article .card-body .btn_detail:hover {
   background-color: blue;
   color: white;
 }
@@ -373,8 +373,57 @@ main section article .card-body .btn_detail:hover {
   HALAMAN DETAIL
 
 */
-article.detail {
-  border: 1px solid gold;
+section.detail-conten {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: grey;
+}
+
+section.detail-conten article {
+  padding: 10px;
+  background-color: rgba(167, 111, 111, 0.219);
+  border-radius: 20px;
+}
+
+section.detail-conten article img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  max-height: 300px;
+  border-radius: 20px;
+}
+
+section.detail-conten article h3 {
+  font-size: 20px;
+  color: goldenrod;
+}
+
+section.detail-conten article h4 {
+  margin-top: 10px;
+}
+
+section.detail-conten article h5 {
+  margin-bottom: 10px;
+}
+
+section.detail-conten article h6 {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+section.detail-conten article p {
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 
 /*

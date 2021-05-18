@@ -115,12 +115,13 @@ main {
     z-index: 1;
     background-color: black;
   }
-  section {
+  section.content {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     margin-top: 50px;
+
     article {
       height: max-content;
       .card {
@@ -219,8 +220,47 @@ main {
 
 */
 
-article.detail {
-  border: 1px solid gold;
+section.detail-conten {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  color: grey;
+
+  article {
+    padding: 10px;
+    background-color: rgba(167, 111, 111, 0.219);
+    border-radius: 20px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+      max-height: 300px;
+      border-radius: 20px;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: goldenrod;
+    }
+    h4 {
+      margin-top: 10px;
+    }
+
+    h5 {
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      font-size: 15px;
+      font-style: italic;
+      font-weight: bold;
+    }
+    p {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 /*

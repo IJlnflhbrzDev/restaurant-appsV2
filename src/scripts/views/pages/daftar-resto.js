@@ -16,7 +16,6 @@ const daftarResto = {
     // Fungsi ini akan dipanggil setelah render()
     const restaurant = await DumyDicodingSource.GetRestauranList();
     const restoranContainer = document.querySelector('.conten');
-
     restaurant.forEach((resto) => {
       restoranContainer.innerHTML += restoTemplate(resto);
     });

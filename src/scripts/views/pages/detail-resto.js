@@ -19,7 +19,7 @@ const detailResto = {
     const restorantDetail = await DumyDicodingSource.GetDetailRestaurant(
       url.id
     );
-    const restoranContainer = document.querySelector('.conten');
+    const restoranContainer = document.querySelector('.detail-conten');
     restoranContainer.innerHTML += RestoDetailTemplate(restorantDetail);
     console.log(restorantDetail);
   },
