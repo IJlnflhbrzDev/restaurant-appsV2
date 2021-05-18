@@ -370,6 +370,15 @@ main section article .card-body .btn_detail:hover {
 
 /*
 
+  HALAMAN DETAIL
+
+*/
+article.detail {
+  border: 1px solid gold;
+}
+
+/*
+
   Footer
 
 */

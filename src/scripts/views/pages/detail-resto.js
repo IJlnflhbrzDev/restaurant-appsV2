@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable arrow-parens */
 /* eslint-disable import/named */
 /* eslint-disable comma-dangle */
 import UrlParser from '../../routes/url-parser';
@@ -18,8 +20,8 @@ const detailResto = {
       url.id
     );
     const restoranContainer = document.querySelector('.conten');
-
     restoranContainer.innerHTML += RestoDetailTemplate(restorantDetail);
+    console.log(restorantDetail);
   },
 };
 

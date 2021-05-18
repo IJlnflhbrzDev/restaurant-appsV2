@@ -35,11 +35,58 @@ const restoTemplate = (resto) => {
 const RestoDetailTemplate = (resto) => {
   return `
 
-     <article>
-          <div>
-                    <h1>${resto.name}</h1>
-                    <h2>${resto.id}</h2>
-          </div>
+     <article class="detail">
+          <img src=${CONFIG.SMALL_IMAGE_URL(resto.pictureId)}
+           class="detail-img"
+           alt="Gambar ${resto.name}">
+
+           <div class="detail-body">
+               <h3>${resto.name}</h3>
+               <h4>${resto.rating}</h4>
+               <h5>Kota ${resto.city}</h5>
+
+               <div class="adress">
+                    <h6>Alamat Restaurant</h6>
+                    <p>${resto.address}</p>
+               </div>
+
+               <div class="categories">
+                    <h6>Kategori Restaurant</h6>
+                    <p>${resto.categories
+                      .map((item) => item.name)
+                      .join(' - ')}</p>
+               </div>
+
+               <div class="menu-food">
+                         <h6>Menu Makanan</h6>
+                         <p>${resto.menus.foods
+                           .map((item) => item.name)
+                           .join(', ')}</p>
+               </div>
+
+               <div class="menu-drinks">
+                         <h6>Menu Minuman</h6>
+                         <p>${resto.menus.drinks
+                           .map((item) => `<span>${item.name}</span>`)
+                           .join(' , ')}</p>
+               </div>
+
+               <div class="description">
+                    <h6>Description</h6>
+                    <p>${resto.description}</p>
+               </div>
+
+               <div class="customerReviews">
+               <h6>Customer Reviews</h6>
+                    ${resto.customerReviews.map((customer) => {
+                      return `
+                              <h6>${customer.name}</h6>
+                              <small>${customer.review}</small>
+                              <p>${customer.date}</p>
+                         `;
+                    })}
+               </div>
+           </div>
      </article>
 
 
