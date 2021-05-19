@@ -1,5 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-unused-vars */
+
+import CONFIG from '../globals/config';
+
 /* eslint-disable no-empty-function */
 const CacheHelper = {
   async cachingAppShell(requests) {
@@ -10,7 +13,7 @@ const CacheHelper = {
   async deleteOldCache() {
     const cacheNames = await caches.keys();
     cacheNames
-      .filter((name) => name !== 'Restaurant Apps PWA')
+      .filter((name) => name !== CONFIG.CACHE_NAME)
       .map((filteredName) => caches.delete(filteredName));
   },
 
@@ -25,7 +28,7 @@ const CacheHelper = {
   },
 
   async _openCache() {
-    return caches.open('Restaurant Apps PWA');
+    return caches.open(CONFIG.CACHE_NAME);
   },
 
   async _fetchRequest(request) {
