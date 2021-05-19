@@ -2,7 +2,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-empty-function */
 const CacheHelper = {
-  async cachingAppShell(requests) {},
+  async cachingAppShell(requests) {
+    const cache = await this._openCache();
+    cache.addAll(requests);
+  },
 
   async deleteOldCache() {},
 
