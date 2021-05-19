@@ -7,7 +7,12 @@ const CacheHelper = {
     cache.addAll(requests);
   },
 
-  async deleteOldCache() {},
+  async deleteOldCache() {
+    const cacheNames = await caches.keys();
+    cacheNames
+      .filter((name) => name !== 'Restaurant Apps PWA')
+      .map((filteredName) => caches.delete(filteredName));
+  },
 
   async revalidateCache(requests) {},
 
