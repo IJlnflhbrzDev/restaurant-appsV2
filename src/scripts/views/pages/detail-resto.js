@@ -4,13 +4,16 @@
 /* eslint-disable comma-dangle */
 import UrlParser from '../../routes/url-parser';
 import DumyDicodingSource from '../../data/dumy.-dicoding';
-import { RestoDetailTemplate } from '../templates/template-html';
+import {
+  createLikeButtonTemplate,
+  RestoDetailTemplate,
+} from '../templates/template-html';
 
 /* eslint-disable no-unused-vars */
 const detailResto = {
   async render() {
     return `
-
+        <div id="likeButtonContainer"></div>
     `;
   },
 
@@ -21,7 +24,9 @@ const detailResto = {
     );
     const restoranContainer = document.querySelector('.detail-conten');
     restoranContainer.innerHTML += RestoDetailTemplate(restorantDetail);
-    console.log(restorantDetail);
+
+    const likeButtonContainer = document.getElementById('likeButtonContainer');
+    likeButtonContainer.innerHTML = createLikeButtonTemplate();
   },
 };
 
