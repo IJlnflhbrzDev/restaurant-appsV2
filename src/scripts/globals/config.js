@@ -10,6 +10,9 @@ const CONFIG = {
   LARGE_IMAGE_URL: (id) => `${CONFIG.BASE_URL}images/large/${id}`,
   DEFAULT_LANGUAGE: 'en-us',
   CACHE_NAME: 'Restaurant Apps PWA',
+  DATABASE_NAME: 'PwaRestV2-database',
+  DATABASE_VERSION: 1,
+  OBJECT_STORE_NAME: 'restaurant',
 };
 
 export default CONFIG;
