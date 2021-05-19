@@ -3,15 +3,14 @@
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
-  "prettier" : {
-    "singleQuote" : true
+  "prettier": {
+    "singleQuote": true
   },
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "fix" : "npx eslint ./src --fix"
-
+    "fix": "npx eslint ./src --fix"
   },
   "keywords": [],
   "author": "IJlal Naufal Hibrizi => ijlnflhbrz@gmail.com",
@@ -42,6 +41,7 @@
     "whatwg-fetch": "^3.2.0"
   },
   "dependencies": {
-    "regenerator-runtime": "^0.13.5"
+    "regenerator-runtime": "^0.13.5",
+    "serviceworker-webpack-plugin": "^1.0.1"
   }
 }
