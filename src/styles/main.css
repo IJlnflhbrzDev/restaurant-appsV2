@@ -373,7 +373,7 @@ main section.conten article .card-body .btn_detail:hover {
   HALAMAN DETAIL
 
 */
-section.detail-conten {
+.detail-page {
   position: relative;
   width: 100%;
   height: -webkit-max-content;
@@ -387,13 +387,13 @@ section.detail-conten {
   color: grey;
 }
 
-section.detail-conten article {
+.detail-page article {
   padding: 10px;
   background-color: rgba(167, 111, 111, 0.219);
   border-radius: 20px;
 }
 
-section.detail-conten article img {
+.detail-page article img {
   width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
@@ -402,27 +402,27 @@ section.detail-conten article img {
   margin-bottom: 10px;
 }
 
-section.detail-conten article .nama-resto {
+.detail-page article .nama-resto {
   font-size: 20px;
   color: goldenrod;
 }
 
-section.detail-conten article h4 {
+.detail-page article h4 {
   margin-top: 10px;
 }
 
-section.detail-conten article h5 {
+.detail-page article h5 {
   margin-bottom: 10px;
 }
 
-section.detail-conten article h6 {
+.detail-page article h6 {
   font-size: 15px;
   font-style: italic;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-section.detail-conten article p {
+.detail-page article p {
   font-size: 13px;
   margin-bottom: 10px;
 }
