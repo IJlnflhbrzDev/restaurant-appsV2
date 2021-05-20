@@ -27,7 +27,6 @@ const detailResto = {
     restoranContainer.innerHTML += RestoDetailTemplate(restorantDetail);
 
     LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
         id: restorantDetail.id,
         title: restorantDetail.title,
@@ -35,6 +34,7 @@ const detailResto = {
         backdrop_path: restorantDetail.backdrop_path,
         vote_average: restorantDetail.vote_average,
       },
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
     });
   },
 };
