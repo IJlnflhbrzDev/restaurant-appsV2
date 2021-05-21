@@ -8,7 +8,6 @@ const app = new App({
   drawer: document.querySelector('#nav-drawwer_mobile'),
   content: document.querySelector('.conten'),
 });
-console.log(app);
 
 window.addEventListener('hashchange', () => {
   app.renderPage();

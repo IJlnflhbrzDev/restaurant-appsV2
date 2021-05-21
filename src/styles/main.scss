@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 // Color Themse
-@import './color-themes', './_aksesibilitas', './responsive-page';
+@import './color-themes', './_aksesibilitas', './navbar', './header',
+  './responsive-page', './footer';
 
 * {
   padding: 0;
@@ -21,88 +22,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/*
-     Navbar Restaurant
-*/
-.nav {
-  &-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $navbar-color;
-    padding: 20px 15px;
-  }
-  &-brand {
-    font-family: 'Satisfy', cursive;
-    letter-spacing: 2px;
-    color: $white;
-    font-size: 30px;
-  }
-  &-menu {
-    display: inline-flex;
-    li {
-      list-style-type: none;
-      a {
-        display: block;
-        min-width: 44px;
-        min-height: 44px;
-        line-height: 44px;
-        padding: 0 1em;
-        font-size: larger;
-        text-decoration: none;
-        color: $white;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  #nav-drawwer {
-    display: none;
-  }
-}
-
-/*
-   styles Header
-*/
-.header {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &-img {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    filter: opacity(0.5);
-    object-fit: cover;
-  }
-  &-heading {
-    position: absolute;
-    text-align: center;
-    color: white;
-    h1 {
-      font-size: 36px;
-      font-weight: 500;
-    }
-    p {
-      width: 90%;
-      margin: 13px auto 0 auto;
-      font-size: 18px;
-      color: rgb(229, 226, 226);
-    }
-  }
-}
-
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   padding: 30px 50px;
 
   h2 {
@@ -115,7 +35,7 @@ main {
     z-index: 1;
     background-color: black;
   }
-  section.conten {
+  .conten {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -224,8 +144,6 @@ main {
   position: relative;
   width: 100%;
   height: max-content;
-  display: flex;
-  flex-wrap: wrap;
   color: grey;
 
   article {
@@ -286,18 +204,4 @@ ICON LIKE
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/*
-
-  Footer
-
-*/
-
-footer {
-  border-top: 1px solid white;
-  color: $gold;
-  padding: 20px;
-  font-weight: bold;
-  text-align: center;
 }

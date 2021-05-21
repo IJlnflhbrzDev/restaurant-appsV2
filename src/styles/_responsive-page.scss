@@ -11,7 +11,7 @@
     }
   }
 }
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 768px) {
   /*
     Navbar top
   */
@@ -75,13 +75,14 @@
   }
 }
 
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 992px) {
   /*
     main Content
 
   */
+
   main {
-    .conten {
+    section.conten {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
     }
