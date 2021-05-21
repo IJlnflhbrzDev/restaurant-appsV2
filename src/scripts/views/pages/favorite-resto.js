@@ -17,6 +17,7 @@ const favoriteResto = {
 
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllResto();
+    console.log(restaurants);
     const restaurantContainer = document.querySelector('#resto');
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += restoTemplate(restaurant);

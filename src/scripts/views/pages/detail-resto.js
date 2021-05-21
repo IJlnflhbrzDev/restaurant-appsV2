@@ -27,17 +27,10 @@ const detailResto = {
     restoranContainer.innerHTML += RestoDetailTemplate(restorantDetail);
 
     LikeButtonInitiator.init({
-      restaurant: {
-        id: restorantDetail.id,
-        title: restorantDetail.title,
-        overview: restorantDetail.overview,
-        backdrop_path: restorantDetail.backdrop_path,
-        vote_average: restorantDetail.vote_average,
-      },
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant: restorantDetail,
     });
   },
 };
-console.log(LikeButtonInitiator.init);
 
 export default detailResto;
