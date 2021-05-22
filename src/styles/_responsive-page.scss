@@ -1,16 +1,3 @@
-@media screen and (max-width: 510px) {
-  /*
-
-    main Content
-
-  */
-  main {
-    section.conten {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr) !important;
-    }
-  }
-}
 @media screen and (max-width: 768px) {
   /*
     Navbar top
@@ -59,32 +46,6 @@
           padding: 0 0.5em;
         }
       }
-    }
-  }
-
-  /*
-    main Content
-
-  */
-  main {
-    padding: 19px !important;
-    .conten {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr) !important;
-    }
-  }
-}
-
-@media screen and (max-width: 992px) {
-  /*
-    main Content
-
-  */
-
-  main {
-    section.conten {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

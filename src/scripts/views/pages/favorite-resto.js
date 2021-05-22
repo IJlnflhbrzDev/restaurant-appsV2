@@ -7,18 +7,13 @@ import { restoTemplate } from '../templates/template-html';
 const favoriteResto = {
   async render() {
     return `
-      <div class="content">
            <h2 class="content__heading">You like Favorite Resto </h2>
-           <div id="resto" class="resto">
-           </div>
-     </div>
     `;
   },
 
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllResto();
-    console.log(restaurants);
-    const restaurantContainer = document.querySelector('#resto');
+    const restaurantContainer = document.querySelector('.conten');
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += restoTemplate(restaurant);
     });
