@@ -1,3 +1,4 @@
+/* eslint-disable eol-last */
 /* eslint-disable indent */
 /* eslint-disable no-undef */
 /* eslint-disable no-trailing-spaces */
