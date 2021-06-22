@@ -27,7 +27,6 @@ const LikeButtonInitiator = {
 
   async _isRestoExist(id) {
     const restaurant = await FavoriteRestaurantIdb.getResto(id);
-    console.log(restaurant);
     return !!restaurant;
   },
 
