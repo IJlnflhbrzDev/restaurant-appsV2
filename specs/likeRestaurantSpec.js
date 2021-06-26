@@ -5,7 +5,7 @@
 import LikeButtonInitiator from '../src/scripts/globals/like-btn-initiator';
 import FavoriteRestaurantIdb from '../src/scripts/data/database';
 
-describe('Liking A Movie', () => {
+describe('Liking A restaurant', () => {
      const addLikeButtonContainer = () => {
           document.body.innerHTML = '<div id="likeButtonContainer"></div>';
      };
@@ -14,72 +14,72 @@ describe('Liking A Movie', () => {
           addLikeButtonContainer();
      });
 
-     it('should show the like button when the movie has not been liked before', async () => {
+     it('should show the like button when the restaurant has not been liked before', async () => {
           await LikeButtonInitiator.init({
                likeButtonContainer: document.querySelector('#likeButtonContainer'),
-               movie: {
+               restaurant: {
                     id: 1,
                },
           });
 
-          expect(document.querySelector('[aria-label="like this movie"]')).toBeTruthy();
+          expect(document.querySelector('[aria-label="like this restaurant"]')).toBeTruthy();
      });
 
-     it('should not show the unlike button when the movie has not been liked before', async () => {
+     it('should not show the unlike button when the restaurant has not been liked before', async () => {
           await LikeButtonInitiator.init({
                likeButtonContainer: document.querySelector('#likeButtonContainer'),
-               movie: {
+               restaurant: {
                     id: 1,
                },
           });
 
-          expect(document.querySelector('[aria-label="unlike this movie"]')).toBeFalsy();
+          expect(document.querySelector('[aria-label="unlike this restaurant"]')).toBeFalsy();
      });
 
-     it('should be able to like the movie', async () => {
+     it('should be able to like the restaurant', async () => {
           await LikeButtonInitiator.init({
                likeButtonContainer: document.querySelector('#likeButtonContainer'),
-               movie: {
+               restaurant: {
                     id: 1,
                },
           });
 
           document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-          const movie = await FavoriteRestaurantIdb.getMovie(1);
+          const restaurant = await FavoriteRestaurantIdb.getResto(1);
 
-          expect(movie).toEqual({ id: 1 });
+          expect(restaurant).toEqual({ id: 1 });
 
-          FavoriteRestaurantIdb.deleteMovie(1);
+          FavoriteRestaurantIdb.deleteResto(1);
      });
 
      it('should not add a movie again when its already liked', async () => {
           await LikeButtonInitiator.init({
                likeButtonContainer: document.querySelector('#likeButtonContainer'),
-               movie: {
+               restaurant: {
                     id: 1,
                },
           });
 
           // Tambahkan film dengan ID 1 ke daftar film yang disukai
-          await FavoriteRestaurantIdb.putMovie({ id: 1 });
+          await FavoriteRestaurantIdb.putResto({ id: 1 });
           // Simulasikan pengguna menekan tombol suka film
           document.querySelector('#likeButton').dispatchEvent(new Event('click'));
           // tidak ada film yang ganda
-          expect(await FavoriteRestaurantIdb.getAllMovies()).toEqual([{ id: 1 }]);
+          expect(await FavoriteRestaurantIdb.getAllResto()).toEqual([{ id: 1 }]);
 
-          FavoriteRestaurantIdb.deleteMovie(1);
+          FavoriteRestaurantIdb.deleteResto(1);
      });
 
      // menggunakan metode xit, bukan it
      xit('should not add a movie when it has no id', async () => {
           await LikeButtonInitiator.init({
                likeButtonContainer: document.querySelector('#likeButtonContainer'),
-               movie: {},
+               restaurant: {},
           });
 
           document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-          expect(await FavoriteRestaurantIdb.getAllMovies()).toEqual([]);
+          expect(await FavoriteRestaurantIdb.getAllResto()).toEqual([]);
      });
      // eslint-disable-next-line eol-last
 });
