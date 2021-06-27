@@ -10,7 +10,8 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "fix": "npx eslint ./src --fix"
+    "fix": "npx eslint ./src --fix",
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "IJlal Naufal Hibrizi => ijlnflhbrz@gmail.com",

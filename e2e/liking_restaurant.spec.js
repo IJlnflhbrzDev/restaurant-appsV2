@@ -9,6 +9,6 @@ Before(({ I }) => {
 });
 
 Scenario('showing empty liked restaurant', ({ I }) => {
-     I.seeElement('#query');
+     I.seeElement('.conten');
      I.see('Tidak ada restaurant untuk ditampilkan', '.restaurant-item__not__found');
 });
